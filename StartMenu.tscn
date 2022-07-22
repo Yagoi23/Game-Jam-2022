@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://SW.png" type="Texture" id=2]
-[ext_resource path="res://SG-1.png.png" type="Texture" id=3]
+[ext_resource path="res://assets/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/SW.png" type="Texture" id=2]
+[ext_resource path="res://assets/SG-1.png.png" type="Texture" id=3]
 [ext_resource path="res://StartMenu.gd" type="Script" id=4]
-[ext_resource path="res://OG-1.png.png" type="Texture" id=5]
-[ext_resource path="res://OW-1.png.png" type="Texture" id=6]
+[ext_resource path="res://assets/OG-1.png.png" type="Texture" id=5]
+[ext_resource path="res://assets/OW-1.png.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64

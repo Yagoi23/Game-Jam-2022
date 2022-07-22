@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OW-1.png.png-7f7d0fb26a2aa68a9b50d67afe8e9f05.stex"
+path="res://.import/StartGameWhite.png-a9c722027b3d8b8956a04a82f7e48a15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OW-1.png.png"
-dest_files=[ "res://.import/OW-1.png.png-7f7d0fb26a2aa68a9b50d67afe8e9f05.stex" ]
+source_file="res://assets/StartGameWhite.png"
+dest_files=[ "res://.import/StartGameWhite.png-a9c722027b3d8b8956a04a82f7e48a15.stex" ]
 
 [params]
 
