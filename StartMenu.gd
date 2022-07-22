@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_TextureButton_button_down():
-	pass
+	get_tree().change_scene("TestScene.tscn")
