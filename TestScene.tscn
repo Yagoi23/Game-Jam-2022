@@ -19,8 +19,4 @@ position = Vector2( 196, -217 )
 current = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 92, -241 )
-
-[node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 342, -245 )
-player_num = 1
+position = Vector2( 68, -192 )
