@@ -7,7 +7,7 @@
 extents = Vector2( 16, 16 )
 
 [node name="Box" type="RigidBody2D"]
-mass = 5.0
+gravity_scale = 9.8
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
