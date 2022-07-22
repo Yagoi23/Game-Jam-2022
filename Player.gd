@@ -7,7 +7,7 @@ extends KinematicBody2D
 export var player_num := 0
 
 export (int) var speed = 150
-export (int) var jump_speed = -150
+export (int) var jump_speed = -300
 export (float) var gravity = 9.8
 export (float) var weight = 1
 #export (float,0,1,0) var acceleration = 1
@@ -42,15 +42,10 @@ func _ready():
 #func floorcheck():
 	
 func _physics_process(delta):
-#	floorcheck()
-
 	if is_on_floor():
-		print("on floor")
 		velocity.y = 0
 		player_state = state.IDLE
-	elif is_on_floor() == false:
-		print("not on floor")
-		#print("not on floor")
+	elif !is_on_floor():
 		if velocity.y <= 0:
 			player_state = state.JUMP
 			JUMP()
@@ -58,9 +53,10 @@ func _physics_process(delta):
 			player_state = state.FALL
 			FALL()
 	move_dir = Input.get_action_strength(right_key) - Input.get_action_strength(left_key)
-	if move_dir:
-		print("moving")
-	velocity.x = move_dir*speed
+	if move_dir != 0:
+		velocity.x = move_dir*speed
+	else:
+		velocity.x = 0
 	if Input.is_action_pressed(up_key) and is_on_floor():
 		velocity.y += jump_speed
 	move_and_slide(velocity, Vector2.UP)
