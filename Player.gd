@@ -43,6 +43,7 @@ func _ready():
 	
 func _physics_process(delta):
 #	floorcheck()
+
 	if is_on_floor():
 		print("on floor")
 		velocity.y = 0
@@ -75,7 +76,7 @@ func _physics_process(delta):
 	elif player_state == state.JUMP:
 		#print("jumping")
 		JUMP()
-	move_and_slide(velocity)
+	move_and_slide(velocity, Vector2.UP)
 	
 
 func JUMP():
