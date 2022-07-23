@@ -25,7 +25,10 @@ text = "                  W,A,S,D to move with player 1
 
                    Arrows to move wtih player 2 
 
+               Get to the green boxs to progress
+
 You must help each other to escape this odd factory
+
 "
 
 [node name="Button" type="Button" parent="ColorRect"]

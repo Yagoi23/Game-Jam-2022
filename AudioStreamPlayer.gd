@@ -1,4 +1,4 @@
-#<<<<<<< Updated upstream
+
 extends AudioStreamPlayer
 
 
@@ -12,7 +12,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	self.global_position = get_global_mouse_position()
+	#self.global_position = get_global_mouse_position()
 	
 	
 	if $AudiostreamPlayer.playing == false:
@@ -20,5 +20,3 @@ func _process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-#=======
-#>>>>>>> Stashed changes
