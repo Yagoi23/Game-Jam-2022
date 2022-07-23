@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GameJam2022TileSet.png-450b108fb09f8387a4619cbfacaa50c9.stex"
+path="res://.import/GameJam2022TileSetBright.png-02fc5d79bf0c092ba57079d5207b59c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GameJam2022TileSet.png"
-dest_files=[ "res://.import/GameJam2022TileSet.png-450b108fb09f8387a4619cbfacaa50c9.stex" ]
+source_file="res://assets/GameJam2022TileSetBright.png"
+dest_files=[ "res://.import/GameJam2022TileSetBright.png-02fc5d79bf0c092ba57079d5207b59c9.stex" ]
 
 [params]
 
