@@ -17,7 +17,7 @@ var velocity = Vector2.ZERO
 
 enum state {RUNNING, JUMP, IDLE, FALL}
 
-var player_state = state.IDLE
+var player_state
 
 var move_dir
 
@@ -39,7 +39,7 @@ func _ready():
 	connect("statechanged",$AnimationPlayer,"on_state_changed")
 	player_state = state.IDLE
 	if player_num == 1:
-		sprite.modulate = Color(255,255,255)
+		sprite.modulate = Color(0,0,255)
 		right_key = "p2_right"
 		left_key = "p2_left"
 		up_key = "p2_up"
@@ -52,6 +52,7 @@ func _ready():
 func _physics_process(delta):
 	var current_state = player_state
 	move_dir = Input.get_action_strength(right_key) - Input.get_action_strength(left_key)
+	#print(move_dir)
 	if move_dir != 0:
 		velocity.x = move_dir*speed
 		#if move_dir == 1:
@@ -66,7 +67,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		player_state = state.IDLE
 	if !is_on_floor():
-		if velocity.y <= 0:
+		if velocity.y < 0:
 			player_state = state.JUMP
 			JUMP()
 		else:
@@ -75,7 +76,7 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed(up_key) and is_on_floor():
 		velocity.y += jump_speed
-	move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
+	move_and_slide(velocity, Vector2.UP, false, 2, PI/4, false)
 	#if !is_on_floor():
 	#	move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	#else:
@@ -88,11 +89,12 @@ func _physics_process(delta):
 			collision.collider.apply_central_impulse(-collision.normal * push)
 	animation()
 	if current_state != player_state:
+		current_state = player_state
 		varchanged()
 func animation():
 	#$AnimationPlayer.play(str(player_state))
-	
-	print(player_state)
+	pass
+	#print(player_state)
 	
 
 func JUMP():
@@ -103,3 +105,5 @@ func FALL():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
