@@ -57,5 +57,13 @@ margin_right = 192.0
 margin_bottom = 320.0
 color = Color( 0.545098, 0.788235, 1, 1 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = -91.0
+margin_top = -122.0
+margin_right = 92.0
+margin_bottom = -108.0
+text = " Get the boxes into the holes
+It's so easy a baby could do it!"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
