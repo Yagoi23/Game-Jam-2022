@@ -7,7 +7,7 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://nextlevel(bothplayers).tscn" type="PackedScene" id=6]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
