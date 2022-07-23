@@ -98,7 +98,7 @@ tracks/1/keys = {
 "values": [ 1 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( -3, 0 )
 scale = Vector2( 2, 2 )
 collision/safe_margin = 2.0
