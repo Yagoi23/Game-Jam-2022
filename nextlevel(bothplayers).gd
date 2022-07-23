@@ -9,19 +9,20 @@ var PlayerCount = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	pass
-func _process(delta):
-	if PlayerCount == 2:
-		print("winner winner")
+#	pass	
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
 		PlayerCount += 1
+		if PlayerCount == 2:
+			print("winner winner")
+			GlobalControl.Current_Level += 1
+			get_tree().change_scene("res://Level"+str(GlobalControl.Current_Level)+".tscn")
 
 
 func _on_Area2D_body_exited(body):
