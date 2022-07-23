@@ -33,7 +33,7 @@ var up_key
 
 #export (int, 0, 200) var push = 100
 func varchanged():
-	#print("Boat")
+	
 	emit_signal("statechanged")
 
 # Called when the node enters the scene tree for the first time.
@@ -53,9 +53,9 @@ func _ready():
 	
 func _physics_process(delta):
 	var current_state = player_state
-	print(current_state)
+	
 	move_dir = Input.get_action_strength(right_key) - Input.get_action_strength(left_key)
-	#print(move_dir)
+	
 	if move_dir != 0:
 		velocity.x = move_dir*speed
 		#if move_dir == 1:
