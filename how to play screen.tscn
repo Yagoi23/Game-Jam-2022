@@ -25,9 +25,9 @@ margin_top = -175.0
 margin_right = -3.0
 margin_bottom = -20.0
 rect_scale = Vector2( 2, 2 )
-text = "                  W,A,S,D to move with player 1
+text = "             W to jump,A,S,D to move with player red
 
-                   Arrows to move wtih player 2 
+UP Arrow to jump the rest of arrows to move wtih player blue 
 
               Press 'R' to restart the current level
 
