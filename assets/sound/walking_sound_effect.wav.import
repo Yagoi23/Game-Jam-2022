@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/walking_sound_effect.wav-750beac58f040e6d6057bf7c8fda2d92.sample"
+
+[deps]
+
+source_file="res://assets/sound/walking_sound_effect.wav"
+dest_files=[ "res://.import/walking_sound_effect.wav-750beac58f040e6d6057bf7c8fda2d92.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
