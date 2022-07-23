@@ -20,20 +20,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -340.0
+margin_left = -380.0
 margin_top = -175.0
-margin_right = -3.0
-margin_bottom = -20.0
+margin_right = 42.0
+margin_bottom = 9.0
 rect_scale = Vector2( 2, 2 )
-text = "             W to jump,A,S,D to move with player red
+text = "               W to jump,A,S,D to move with player red
 
 UP Arrow to jump the rest of arrows to move wtih player blue 
 
-              Press 'R' to restart the current level
+                   Press 'R' to restart the current level
 
-               Get to the green boxs to progress
+                    Get to the green boxs to progress
 
-You must help each other to escape this odd factory
+    You must help each other to escape this odd factory
 
 "
 
