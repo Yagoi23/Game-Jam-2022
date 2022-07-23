@@ -41,7 +41,7 @@ func _ready():
 	connect("statechanged",$AnimationPlayer,"on_state_changed")
 	player_state = state.IDLE
 	if player_num == 1:
-		sprite.modulate = Color(0,0,255)
+		#sprite.modulate = Color(0,0,255)
 		right_key = "p2_right"
 		left_key = "p2_left"
 		up_key = "p2_up"
