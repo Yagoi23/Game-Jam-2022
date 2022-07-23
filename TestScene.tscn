@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,8 +20,7 @@ position = Vector2( 196, -217 )
 current = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 92, -241 )
+position = Vector2( 68, -192 )
 
-[node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 342, -245 )
-player_num = 1
+[node name="Button" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, -138 )

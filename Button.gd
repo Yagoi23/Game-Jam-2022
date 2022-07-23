@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Node2D
 
 
 # Declare member variables here. Examples:
@@ -14,7 +14,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+var entity_in_area = {}
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("entity"):
+		entity_in_area.append(area)
+		pass
 
 
-func _on_TextureButton_button_down():
-	get_tree().change_scene("TestScene.tscn")
+func _on_Area2D_area_exited(area):
+	if area.is_in_group("entity"):
+		entity_in_area.drop(area)
+		pass # Replace with function body.

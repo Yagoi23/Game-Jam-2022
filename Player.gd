@@ -7,7 +7,7 @@ extends KinematicBody2D
 export var player_num := 0
 
 export (int) var speed = 150
-export (int) var jump_speed = -150
+export (int) var jump_speed = -300
 export (float) var gravity = 9.8
 export (float) var weight = 1
 #export (float,0,1,0) var acceleration = 1
@@ -27,6 +27,8 @@ var right_key
 var left_key
 var up_key
 
+#export (int, 0, 200) var push = 100
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_state = state.IDLE
@@ -42,41 +44,34 @@ func _ready():
 #func floorcheck():
 	
 func _physics_process(delta):
-#	floorcheck()
-
 	if is_on_floor():
-		print("on floor")
 		velocity.y = 0
-	elif is_on_floor() == false:
-		print("not on floor")
-	#if Input.is_action_pressed(right_key):
-	#	print("right")
+		player_state = state.IDLE
+	elif !is_on_floor():
+		if velocity.y <= 0:
+			player_state = state.JUMP
+			JUMP()
+		else:
+			player_state = state.FALL
+			FALL()
 	move_dir = Input.get_action_strength(right_key) - Input.get_action_strength(left_key)
 	if move_dir != 0:
-		print("moving")
 		velocity.x = move_dir*speed
-	else: 
+	else:
 		velocity.x = 0
 	if Input.is_action_pressed(up_key) and is_on_floor():
 		velocity.y += jump_speed
-		
+	move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
+	#if !is_on_floor():
+	#	move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
+	#else:
+	#	move_and_slide(velocity, Vector2.UP, false, 4, PI/4, true)
 	
-	if is_on_floor():
-		player_state = state.IDLE
-	elif not is_on_floor():
-		#print("not on floor")
-		if velocity.y <= 0:
-			player_state = state.JUMP
-		else:
-			player_state = state.FALL
-	
-	if player_state == state.FALL:
-		#print("falling")
-		FALL()
-	elif player_state == state.JUMP:
-		#print("jumping")
-		JUMP()
-	move_and_slide(velocity, Vector2.UP)
+	for index in get_slide_count():
+		var push = speed * weight
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("entity"):
+			collision.collider.apply_central_impulse(-collision.normal * push)
 	
 
 func JUMP():
