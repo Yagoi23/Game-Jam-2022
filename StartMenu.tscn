@@ -29,7 +29,7 @@ size_flags_vertical = 3
 margin_right = 784.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 1 )
-text = "Name Of The Game"
+text = "Handy Friends"
 align = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
