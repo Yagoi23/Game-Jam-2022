@@ -9,7 +9,7 @@ onready var sound = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	get_parent().get_node("Camera2D").make_current()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
