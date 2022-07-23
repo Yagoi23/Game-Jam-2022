@@ -17,4 +17,8 @@ func _ready():
 
 
 func _on_Button_pressed():
+<<<<<<< Updated upstream
 	get_tree().change_scene("res://Level 1.tscn")
+=======
+	pass # Replace with function body.
+>>>>>>> Stashed changes
