@@ -5,7 +5,7 @@ onready var raycast = $KinematicBody2D/RayCast2D
 onready var raycast2 = $KinematicBody2D/RayCast2D2
 onready var raycast3 = $KinematicBody2D/RayCast2D3
 onready var kinematicbody = $KinematicBody2D
-#onready var sound = $AudioStreamPlayer2D
+onready var sound = $AudioStreamPlayer2D
 
 export (int) var Channelid = 0
 #var Channel = "Channel" + str(Channelid)
@@ -16,7 +16,7 @@ var button_state = STATE.OFF
 func _physics_process(delta):
 	is_raycast_colliding()
 	if kinematicbody.position.y <= 2:
-#		sound.play()
+		sound.play()
 		button_state = STATE.OFF
 		Global_Deactivate()
 	if kinematicbody.position.y >= 0:
