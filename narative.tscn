@@ -87,7 +87,6 @@ text = "Narative"
 position = Vector2( -1446, 2149 )
 scale = Vector2( 7.07129, 7.07129 )
 frames = SubResource( 5 )
-frame = 2
 playing = true
 offset = Vector2( 327, -242 )
 
@@ -95,7 +94,7 @@ offset = Vector2( 327, -242 )
 position = Vector2( 180, 439 )
 scale = Vector2( 6.59375, 7.21191 )
 frames = SubResource( 10 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="Button" type="Button" parent="."]

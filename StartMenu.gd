@@ -16,7 +16,7 @@ func _ready():
 #	pass
 
 func _on_StartGame_pressed():
-	get_tree().change_scene("TestLevel1.tscn")
+	get_tree().change_scene("narative.tscn")
 
 
 
