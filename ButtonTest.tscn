@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,3 +28,6 @@ position = Vector2( 160, -152 )
 
 [node name="Button2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 160, -104 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( -62, -148 )
