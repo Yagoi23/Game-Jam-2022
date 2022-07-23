@@ -24,6 +24,7 @@ position = Vector2( 324, -143 )
 position = Vector2( -332, -106 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -407, -138 )
