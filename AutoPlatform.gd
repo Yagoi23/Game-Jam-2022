@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
 export (int) var speed = 10
-
+export (int) var rot = 10
+export (bool) var rotating
 var velocity = Vector2()
 
 var dir = 1
@@ -17,6 +18,8 @@ func _physics_process(delta): #makes a block that moves horizontaly and changes 
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	if is_on_wall():
 		dir = dir * -1
+	if rotating == true:
+		rotation_degrees = rotation_degrees + 1
 	
 	#for index in get_slide_count():
 	#	var push = speed
