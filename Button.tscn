@@ -6,7 +6,7 @@
 extents = Vector2( 10, 2 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 3, 4 )
+extents = Vector2( 15, 5 )
 
 [node name="Button" type="Node2D"]
 

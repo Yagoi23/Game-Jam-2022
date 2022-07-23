@@ -13,10 +13,6 @@ config_version=4
 config/name="Helping-Hands-2022"
 config/icon="res://assets/sound/icon.png"
 
-[autoload]
-
-ButtonLogicState="*res://ButtonLogicState.gd"
-
 [input]
 
 p1_right={
