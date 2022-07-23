@@ -1,7 +1,7 @@
 extends Node2D
 
 var PlayerCount = 0
-
+onready var sound = $AudioStreamPlayer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -22,6 +22,7 @@ func _on_Area2D_body_entered(body):
 		PlayerCount += 1
 		if PlayerCount == 2:
 			print("winner winner")
+			sound.play()
 			GlobalControl.Current_Level += 1
 			get_tree().change_scene("res://Level"+str(GlobalControl.Current_Level)+".tscn")
 
