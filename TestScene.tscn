@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sound/Sneaky-Snitch_backgound_music.mp3" type="AudioStream" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,3 +25,6 @@ position = Vector2( 68, -192 )
 
 [node name="Button" parent="." instance=ExtResource( 4 )]
 position = Vector2( 320, -138 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
