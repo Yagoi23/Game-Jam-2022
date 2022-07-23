@@ -56,11 +56,12 @@ size_flags_vertical = 0
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 
-[node name="Options" type="TextureButton" parent="VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Quit" type="TextureButton" parent="VBoxContainer/CenterContainer/VBoxContainer"]
 margin_top = 70.0
 margin_right = 200.0
 margin_bottom = 110.0
 texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 5 )
 
-[connection signal="button_down" from="VBoxContainer/CenterContainer/VBoxContainer/StartGame" to="." method="_on_TextureButton_button_down"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/VBoxContainer/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
