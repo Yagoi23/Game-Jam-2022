@@ -23,4 +23,7 @@ current = true
 position = Vector2( 48, -152 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( -8, -120 )
+position = Vector2( 160, -152 )
+
+[node name="Button2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 160, -104 )

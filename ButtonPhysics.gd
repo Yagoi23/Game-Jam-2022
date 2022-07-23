@@ -1,28 +1,23 @@
-extends KinematicBody2D
+extends Node2D
 #class CustomButton:
 
-onready var raycast = $RayCast2D
+onready var raycast = $KinematicBody2D/RayCast2D
+onready var kinematicbody = $KinematicBody2D
 
-export var Channelid := 1
+export (int) var Channelid = 0
 #var Channel = "Channel" + str(Channelid)
-
-export (int) var max_position_y = 1
-export (int) var max_position_x = 1
-
-export (int) var min_position_y = -1
-export (int) var min_position_x = -1
 
 enum STATE {ON, OFF}
 var button_state = STATE.OFF
 
 func _physics_process(delta):
 	if raycast.is_colliding():
-		if position.y <= 2:
-			position.y += 1
+		if kinematicbody.position.y <= 2:
+			kinematicbody.position.y += 1
 	elif !raycast.is_colliding():
-		if position.y >= 0:
-			position.y -= 1
-	if position.y >= 0:
+		if kinematicbody.position.y >= 0:
+			kinematicbody.position.y -= 1
+	if kinematicbody.position.y >= 0:
 		button_state = STATE.ON
 		Global_Activate()
 	else:
