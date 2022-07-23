@@ -2,7 +2,10 @@ extends Node2D
 #class CustomButton:
 
 onready var raycast = $KinematicBody2D/RayCast2D
+onready var raycast2 = $KinematicBody2D/RayCast2D2
+onready var raycast3 = $KinematicBody2D/RayCast2D3
 onready var kinematicbody = $KinematicBody2D
+onready var sound = $AudioStreamPlayer2D
 
 export (int) var Channelid = 0
 #var Channel = "Channel" + str(Channelid)
@@ -11,19 +14,23 @@ enum STATE {ON, OFF, IDLE}
 var button_state = STATE.OFF
 
 func _physics_process(delta):
-	if raycast.is_colliding():
-		if kinematicbody.position.y <= 2:
-			kinematicbody.position.y += 1
-	elif !raycast.is_colliding():
-		if kinematicbody.position.y >= 0:
-			kinematicbody.position.y -= 1
+	is_raycast_colliding()
 	if kinematicbody.position.y <= 2:
+		sound.play()
 		button_state = STATE.OFF
 		Global_Deactivate()
 	if kinematicbody.position.y >= 0:
 		button_state = STATE.ON
+		
 		Global_Activate()
-	
+func is_raycast_colliding():
+	if raycast.is_colliding() or raycast2.is_colliding() or raycast3.is_colliding():
+		if kinematicbody.position.y <= 2:
+			kinematicbody.position.y += 1
+	elif !raycast.is_colliding() or !raycast2.is_colliding() or !raycast3.is_colliding():
+		if kinematicbody.position.y >= 0:
+			kinematicbody.position.y -= 1
+
 	#elif button_state != STATE.IDLE:
 		#button_state = STATE.OFF
 	#else:

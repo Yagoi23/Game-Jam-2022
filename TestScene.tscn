@@ -26,6 +26,11 @@ position = Vector2( 68, -192 )
 
 [node name="Button" parent="." instance=ExtResource( 4 )]
 position = Vector2( 320, -138 )
+<<<<<<< Updated upstream
+=======
+scale = Vector2( 4, 1 )
+Channelid = 9
+>>>>>>> Stashed changes
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 16, -168 )
