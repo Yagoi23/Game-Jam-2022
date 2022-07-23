@@ -1,5 +1,4 @@
-#<<<<<<< Updated upstream
-extends AudioStreamPlayer
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -11,14 +10,11 @@ extends AudioStreamPlayer
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
-	self.global_position = get_global_mouse_position()
-	
-	
-	if $AudiostreamPlayer.playing == false:
-		$AudiostreamPlayer.play()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-#=======
-#>>>>>>> Stashed changes
+
+
+func _on_Button_pressed():
+	get_tree().quit()
