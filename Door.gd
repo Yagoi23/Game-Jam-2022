@@ -2,6 +2,7 @@ extends Node2D
 
 onready var collisonshape = $StaticBody2D/CollisionShape2D
 onready var colorrect = $StaticBody2D/ColorRect
+onready var doorsprite = $StaticBody2D/ColorRect/Door
 
 export (bool) var reverse = false
 
@@ -11,9 +12,11 @@ func _process(delta):
 	var active = check_active()
 	if active != reverse:
 		colorrect.color = Color(1,1,1,0.3)
+		doorsprite.hide()
 		collisonshape.disabled = true
 	else:
 		colorrect.color = Color(0,1,0)
+		doorsprite.show()
 		collisonshape.disabled = false
 
 func check_active():
