@@ -16,7 +16,7 @@ var button_state = STATE.OFF
 func _physics_process(delta):
 	is_raycast_colliding()
 	if kinematicbody.position.y <= 2:
-		#sound.play()
+#		sound.play()
 		button_state = STATE.OFF
 		Global_Deactivate()
 	if kinematicbody.position.y >= 0:
