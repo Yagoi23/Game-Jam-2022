@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -15,10 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_StartGame_pressed():
-	get_tree().change_scene("narative.tscn")
 
-
-
-func _on_Quit_pressed():
-	get_tree().quit()
+func _on_Button_pressed():
+	get_tree().change_scene("res://how to play screen.tscn")

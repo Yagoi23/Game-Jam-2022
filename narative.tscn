@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://narative button.gd" type="Script" id=1]
+[ext_resource path="res://assets/blue_hand_idle.png" type="Texture" id=2]
+[ext_resource path="res://assets/red_hand_idle.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -436.0
+margin_top = -119.0
+margin_bottom = -71.0
+rect_scale = Vector2( 2, 2 )
+text = "                   The both of you wake up in a dark place
+      unsure on what is happing or where you are or what you are
+ But you are trap together knowing not why but you need to get out"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -53.0
+margin_top = 29.0
+margin_bottom = 43.0
+rect_scale = Vector2( 2, 2 )
+text = "Narative"
+
+[node name="blue hand" type="AnimatedSprite" parent="."]
+position = Vector2( -1446, 2149 )
+scale = Vector2( 7.07129, 7.07129 )
+frames = SubResource( 5 )
+playing = true
+offset = Vector2( 327, -242 )
+
+[node name="red hand" type="AnimatedSprite" parent="."]
+position = Vector2( 180, 439 )
+scale = Vector2( 6.59375, 7.21191 )
+frames = SubResource( 10 )
+frame = 3
+playing = true
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -171.0
+margin_top = -174.0
+margin_right = 165.0
+margin_bottom = -16.0
+text = "Next"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
