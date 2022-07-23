@@ -10,10 +10,10 @@ export (int) var Channelid = 0
 func _process(delta):
 	var active = check_active()
 	if active != reverse:
-		colorrect.visible = false
+		colorrect.color = Color(1,1,1,0.3)
 		collisonshape.disabled = true
 	else:
-		colorrect.visible = true
+		colorrect.color = Color(0,1,0)
 		collisonshape.disabled = false
 
 func check_active():
