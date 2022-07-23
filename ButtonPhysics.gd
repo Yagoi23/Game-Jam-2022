@@ -7,7 +7,7 @@ onready var kinematicbody = $KinematicBody2D
 export (int) var Channelid = 0
 #var Channel = "Channel" + str(Channelid)
 
-enum STATE {ON, OFF}
+enum STATE {ON, OFF, IDLE}
 var button_state = STATE.OFF
 
 func _physics_process(delta):
@@ -17,13 +17,21 @@ func _physics_process(delta):
 	elif !raycast.is_colliding():
 		if kinematicbody.position.y >= 0:
 			kinematicbody.position.y -= 1
+	if kinematicbody.position.y <= 2:
+		button_state = STATE.OFF
+		Global_Deactivate()
+		print("notactive")
 	if kinematicbody.position.y >= 0:
 		button_state = STATE.ON
 		Global_Activate()
-	else:
-		button_state = STATE.OFF
+		print("active")
+	
+	#elif button_state != STATE.IDLE:
+		#button_state = STATE.OFF
+	#else:
+		#button_state = STATE.IDLE
 		#print("off")
-		Global_Deactivate()
+		#Global_Deactivate()
 	#else:
 		#print("not active")
 func Global_Activate():
