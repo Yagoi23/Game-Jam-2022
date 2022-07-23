@@ -23,6 +23,8 @@ current = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -407, -138 )
+collision/safe_margin = 10.0
+gravity = 1.0
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 413, -162 )

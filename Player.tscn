@@ -5,7 +5,7 @@
 [ext_resource path="res://Animation.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.25, 8.5 )
+extents = Vector2( 6.25, 8.75 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "0"
@@ -101,11 +101,10 @@ tracks/1/keys = {
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( -3, 0 )
 scale = Vector2( 2, 2 )
-collision/safe_margin = 2.0
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.25, -0.5 )
+position = Vector2( 1.25, -0.25 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
