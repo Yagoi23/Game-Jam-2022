@@ -29,7 +29,20 @@ scale = Vector2( 2, 2 )
 speed = 80
 activatable = true
 
+[node name="Platform3" parent="TileMap" instance=ExtResource( 1 )]
+position = Vector2( 320, 208 )
+scale = Vector2( 2, 2 )
+speed = 200
+reverse = true
+activatable = true
+
+[node name="Button2" parent="TileMap/Platform3" instance=ExtResource( 5 )]
+position = Vector2( 0, -16.5 )
+scale = Vector2( 1.5, 1 )
+Channelid = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 zoom = Vector2( 1.1, 1.1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
@@ -39,137 +52,9 @@ position = Vector2( -528, -248 )
 position = Vector2( 520, -248 )
 player_num = 1
 
-[node name="Node2D2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -336, -80 )
-
-[node name="Node2D5" parent="." instance=ExtResource( 4 )]
-position = Vector2( -368, -80 )
-
-[node name="Node2D6" parent="." instance=ExtResource( 4 )]
-position = Vector2( -400, -80 )
-
-[node name="Node2D7" parent="." instance=ExtResource( 4 )]
-position = Vector2( -432, -80 )
-
-[node name="Node2D8" parent="." instance=ExtResource( 4 )]
-position = Vector2( -464, -80 )
-
-[node name="Node2D9" parent="." instance=ExtResource( 4 )]
-position = Vector2( -496, -80 )
-
-[node name="Node2D10" parent="." instance=ExtResource( 4 )]
-position = Vector2( -528, -80 )
-
-[node name="Node2D11" parent="." instance=ExtResource( 4 )]
-position = Vector2( -304, -80 )
-
-[node name="Node2D12" parent="." instance=ExtResource( 4 )]
-position = Vector2( -272, -80 )
-
-[node name="Node2D13" parent="." instance=ExtResource( 4 )]
-position = Vector2( -240, -80 )
-
-[node name="Node2D14" parent="." instance=ExtResource( 4 )]
-position = Vector2( -208, -80 )
-
-[node name="Node2D15" parent="." instance=ExtResource( 4 )]
-position = Vector2( -176, -80 )
-
-[node name="Node2D16" parent="." instance=ExtResource( 4 )]
-position = Vector2( -144, -80 )
-
-[node name="Node2D30" parent="." instance=ExtResource( 4 )]
-position = Vector2( -336, 304 )
-
-[node name="Node2D31" parent="." instance=ExtResource( 4 )]
-position = Vector2( -368, 304 )
-
-[node name="Node2D32" parent="." instance=ExtResource( 4 )]
-position = Vector2( -400, 304 )
-
-[node name="Node2D33" parent="." instance=ExtResource( 4 )]
-position = Vector2( -432, 304 )
-
-[node name="Node2D34" parent="." instance=ExtResource( 4 )]
-position = Vector2( -464, 304 )
-
-[node name="Node2D35" parent="." instance=ExtResource( 4 )]
-position = Vector2( -496, 304 )
-
-[node name="Node2D36" parent="." instance=ExtResource( 4 )]
-position = Vector2( -528, 304 )
-
-[node name="Node2D37" parent="." instance=ExtResource( 4 )]
-position = Vector2( -304, 304 )
-
-[node name="Node2D38" parent="." instance=ExtResource( 4 )]
-position = Vector2( -272, 304 )
-
-[node name="Node2D39" parent="." instance=ExtResource( 4 )]
-position = Vector2( -240, 304 )
-
-[node name="Node2D40" parent="." instance=ExtResource( 4 )]
-position = Vector2( -208, 304 )
-
-[node name="Node2D41" parent="." instance=ExtResource( 4 )]
-position = Vector2( -176, 304 )
-
-[node name="Node2D42" parent="." instance=ExtResource( 4 )]
-position = Vector2( -144, 304 )
-
-[node name="Node2D43" parent="." instance=ExtResource( 4 )]
-position = Vector2( -112, 304 )
-
-[node name="Node2D44" parent="." instance=ExtResource( 4 )]
-position = Vector2( -80, 304 )
-
-[node name="Node2D17" parent="." instance=ExtResource( 4 )]
-position = Vector2( 336, -80 )
-
-[node name="Node2D18" parent="." instance=ExtResource( 4 )]
-position = Vector2( 304, -80 )
-
-[node name="Node2D19" parent="." instance=ExtResource( 4 )]
-position = Vector2( 272, -80 )
-
-[node name="Node2D20" parent="." instance=ExtResource( 4 )]
-position = Vector2( 240, -80 )
-
-[node name="Node2D21" parent="." instance=ExtResource( 4 )]
-position = Vector2( 208, -80 )
-
-[node name="Node2D22" parent="." instance=ExtResource( 4 )]
-position = Vector2( 176, -80 )
-
-[node name="Node2D23" parent="." instance=ExtResource( 4 )]
-position = Vector2( 144, -80 )
-
-[node name="Node2D24" parent="." instance=ExtResource( 4 )]
-position = Vector2( 368, -80 )
-
-[node name="Node2D25" parent="." instance=ExtResource( 4 )]
-position = Vector2( 400, -80 )
-
-[node name="Node2D26" parent="." instance=ExtResource( 4 )]
-position = Vector2( 432, -80 )
-
-[node name="Node2D27" parent="." instance=ExtResource( 4 )]
-position = Vector2( 464, -80 )
-
-[node name="Node2D28" parent="." instance=ExtResource( 4 )]
-position = Vector2( 496, -80 )
-
-[node name="Node2D29" parent="." instance=ExtResource( 4 )]
-position = Vector2( 528, -80 )
-
 [node name="Button" parent="." instance=ExtResource( 5 )]
 position = Vector2( -64, 48 )
 scale = Vector2( 4, 2 )
-
-[node name="Button2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 480, 304 )
-scale = Vector2( 4, 2 )
-Channelid = 1
 
 [node name="Node2D3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, 208 )
@@ -181,7 +66,7 @@ reverse = true
 Channelid = 1
 
 [node name="Door2" parent="." instance=ExtResource( 7 )]
-position = Vector2( -176, 240 )
+position = Vector2( -176, 224 )
 reverse = true
 Channelid = 1
 
@@ -196,3 +81,167 @@ Channelid = 1
 [node name="Door5" parent="." instance=ExtResource( 7 )]
 position = Vector2( -176, 47 )
 Channelid = 1
+
+[node name="Lava" type="Node2D" parent="."]
+
+[node name="Node2D2" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -336, -80 )
+
+[node name="Node2D5" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -368, -80 )
+
+[node name="Node2D6" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -400, -80 )
+
+[node name="Node2D7" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -432, -80 )
+
+[node name="Node2D8" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -464, -80 )
+
+[node name="Node2D9" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -496, -80 )
+
+[node name="Node2D10" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -528, -80 )
+
+[node name="Node2D11" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -304, -80 )
+
+[node name="Node2D12" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -272, -80 )
+
+[node name="Node2D13" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -240, -80 )
+
+[node name="Node2D14" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -208, -80 )
+
+[node name="Node2D15" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -176, -80 )
+
+[node name="Node2D16" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -144, -80 )
+
+[node name="Node2D17" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 336, -80 )
+
+[node name="Node2D18" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 304, -80 )
+
+[node name="Node2D19" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 272, -80 )
+
+[node name="Node2D20" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 240, -80 )
+
+[node name="Node2D21" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 208, -80 )
+
+[node name="Node2D22" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 176, -80 )
+
+[node name="Node2D23" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 144, -80 )
+
+[node name="Node2D24" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 368, -80 )
+
+[node name="Node2D25" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 400, -80 )
+
+[node name="Node2D26" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 432, -80 )
+
+[node name="Node2D27" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 464, -80 )
+
+[node name="Node2D28" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 496, -80 )
+
+[node name="Node2D29" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 528, -80 )
+
+[node name="Node2D45" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 336, 304 )
+
+[node name="Node2D46" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 304, 304 )
+
+[node name="Node2D47" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 272, 304 )
+
+[node name="Node2D48" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 240, 304 )
+
+[node name="Node2D49" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 208, 304 )
+
+[node name="Node2D50" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 176, 304 )
+
+[node name="Node2D51" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 144, 304 )
+
+[node name="Node2D52" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 368, 304 )
+
+[node name="Node2D53" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 400, 304 )
+
+[node name="Node2D54" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 432, 304 )
+
+[node name="Node2D55" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 464, 304 )
+
+[node name="Node2D56" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 496, 304 )
+
+[node name="Node2D57" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( 528, 304 )
+
+[node name="Node2D30" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -336, 304 )
+
+[node name="Node2D31" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -368, 304 )
+
+[node name="Node2D32" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -400, 304 )
+
+[node name="Node2D33" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -432, 304 )
+
+[node name="Node2D34" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -464, 304 )
+
+[node name="Node2D35" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -496, 304 )
+
+[node name="Node2D36" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -528, 304 )
+
+[node name="Node2D37" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -304, 304 )
+
+[node name="Node2D38" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -272, 304 )
+
+[node name="Node2D39" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -240, 304 )
+
+[node name="Node2D40" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -208, 304 )
+
+[node name="Node2D41" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -176, 304 )
+
+[node name="Node2D42" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -144, 304 )
+
+[node name="Node2D43" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -112, 304 )
+
+[node name="Node2D44" parent="Lava" instance=ExtResource( 4 )]
+position = Vector2( -80, 304 )
