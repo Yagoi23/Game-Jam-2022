@@ -20,11 +20,9 @@ func _physics_process(delta):
 	if kinematicbody.position.y <= 2:
 		button_state = STATE.OFF
 		Global_Deactivate()
-		print("notactive")
 	if kinematicbody.position.y >= 0:
 		button_state = STATE.ON
 		Global_Activate()
-		print("active")
 	
 	#elif button_state != STATE.IDLE:
 		#button_state = STATE.OFF
