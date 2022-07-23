@@ -1,4 +1,4 @@
-extends AudioStreamPlayer
+extends Node2D
 
 
 # Declare member variables here. Examples:
@@ -8,14 +8,9 @@ extends AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	GlobalControl.Current_Level = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_just_pressed("BackgroundAudio"):
-		if is_playing():
-			stop()
-		elif not is_playing():
-			play()
-		
+#func _process(delta):
+#	pass
