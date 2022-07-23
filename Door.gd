@@ -3,13 +3,13 @@ extends Node2D
 onready var collisonshape = $StaticBody2D/CollisionShape2D
 onready var colorrect = $StaticBody2D/ColorRect
 
+export (bool) var reverse = false
 
 export (int) var Channelid = 0
 
 func _process(delta):
 	var active = check_active()
-	print(active)
-	if active:
+	if active != reverse:
 		colorrect.visible = false
 		collisonshape.disabled = true
 	else:

@@ -15,7 +15,7 @@ export (float) var weight = 1
 
 enum state {RUNNING, JUMP, IDLE, FALL}
 
-onready var sound = $AudioStreamPlayer2D
+
 
 var velocity = Vector2.ZERO
 
@@ -41,7 +41,7 @@ func _ready():
 	connect("statechanged",$AnimationPlayer,"on_state_changed")
 	player_state = state.IDLE
 	if player_num == 1:
-		sprite.modulate = Color(0,0,255)
+		#sprite.modulate = Color(0,0,255)
 		right_key = "p2_right"
 		left_key = "p2_left"
 		up_key = "p2_up"
@@ -49,6 +49,8 @@ func _ready():
 		right_key = "p1_right"
 		left_key = "p1_left"
 		up_key = "p1_up"
+	if gravity < 0:
+		sprite.flip_v = true
 #func floorcheck():
 	
 func _physics_process(delta):
@@ -66,15 +68,23 @@ func _physics_process(delta):
 		#	scale.x = 2
 		#elif move_dir == -1:
 		#	scale.x = -2
-		if is_on_floor():
+		if is_on_floor() and gravity > 0:
 			velocity.y = 0
 			player_state = state.RUNNING
-			sound.play()
-			
+		elif is_on_ceiling() and gravity < 0:
+			velocity.y = 0
+			player_state = state.RUNNING
 	else:
 		velocity.x = 0
 		player_state = state.IDLE
-	if !is_on_floor():
+	if !is_on_floor() and gravity > 0:
+		if velocity.y < 0:
+			player_state = state.JUMP
+			JUMP()
+		else:
+			player_state = state.FALL
+			FALL()
+	elif !is_on_ceiling() and gravity < 0:
 		if velocity.y < 0:
 			player_state = state.JUMP
 			JUMP()
@@ -82,7 +92,9 @@ func _physics_process(delta):
 			player_state = state.FALL
 			FALL()
 
-	if Input.is_action_pressed(up_key) and is_on_floor():
+	if Input.is_action_pressed(up_key) and is_on_floor() and gravity > 0:
+		velocity.y += jump_speed
+	elif Input.is_action_pressed(up_key) and is_on_ceiling() and gravity < 0:
 		velocity.y += jump_speed
 	move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	#if !is_on_floor():
@@ -109,7 +121,9 @@ func JUMP():
 	if velocity.y <= -300:
 		velocity.y = -300
 	velocity.y += weight * gravity
-	if is_on_ceiling():
+	if is_on_ceiling() and gravity > 0:
+		velocity.y = 0
+	elif is_on_floor() and gravity < 0:
 		velocity.y = 0
 
 func FALL():

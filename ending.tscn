@@ -58,7 +58,7 @@ text = "You have escaped. You are now reunited with your body"
 position = Vector2( 511, 312 )
 scale = Vector2( 12.375, 12.375 )
 frames = SubResource( 7 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="Button" type="Button" parent="."]

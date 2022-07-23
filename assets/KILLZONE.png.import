@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue_hand_jump.png-63ddfe1f162b6e62546707eb7cfc7e84.stex"
+path="res://.import/KILLZONE.png-843fcf0329d2fbe692c6c11daa1d20d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blue_hand_jump.png"
-dest_files=[ "res://.import/blue_hand_jump.png-63ddfe1f162b6e62546707eb7cfc7e84.stex" ]
+source_file="res://assets/KILLZONE.png"
+dest_files=[ "res://.import/KILLZONE.png-843fcf0329d2fbe692c6c11daa1d20d9.stex" ]
 
 [params]
 
