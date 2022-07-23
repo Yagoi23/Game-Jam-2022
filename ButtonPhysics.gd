@@ -4,7 +4,7 @@ extends KinematicBody2D
 onready var raycast = $RayCast2D
 
 export var Channelid := 1
-var Channel = "Channel" + str(Channelid)
+#var Channel = "Channel" + str(Channelid)
 
 export (int) var max_position_y = 1
 export (int) var max_position_x = 1
@@ -24,18 +24,52 @@ func _physics_process(delta):
 			position.y -= 1
 	if position.y >= 0:
 		button_state = STATE.ON
-		#print("on")
-		ButtonLogicState.Channel0 = ButtonLogicState.STATE.ON
-		ButtonLogicState.Channel1 = ButtonLogicState.STATE.OFF
+		Global_Activate()
 	else:
 		button_state = STATE.OFF
 		#print("off")
-		ButtonLogicState.Channel0 = ButtonLogicState.STATE.OFF
-		ButtonLogicState.Channel1 = ButtonLogicState.STATE.ON
+		Global_Deactivate()
 	#else:
 		#print("not active")
 func Global_Activate():
-	pass
-
-func Match():
-	pass
+	if Channelid == 0:
+		ButtonLogicState.Channel0 = ButtonLogicState.STATE.ON
+	elif Channelid == 1:
+		ButtonLogicState.Channel1 = ButtonLogicState.STATE.ON
+	elif Channelid == 2:
+		ButtonLogicState.Channel2 = ButtonLogicState.STATE.ON
+	elif Channelid == 3:
+		ButtonLogicState.Channel3 = ButtonLogicState.STATE.ON
+	elif Channelid == 4:
+		ButtonLogicState.Channel4 = ButtonLogicState.STATE.ON
+	elif Channelid == 5:
+		ButtonLogicState.Channel5 = ButtonLogicState.STATE.ON
+	elif Channelid == 6:
+		ButtonLogicState.Channel6 = ButtonLogicState.STATE.ON
+	elif Channelid == 7:
+		ButtonLogicState.Channel7 = ButtonLogicState.STATE.ON
+	elif Channelid == 8:
+		ButtonLogicState.Channel8 = ButtonLogicState.STATE.ON
+	elif Channelid == 9:
+		ButtonLogicState.Channel9 = ButtonLogicState.STATE.ON
+func Global_Deactivate():
+	if Channelid == 0:
+		ButtonLogicState.Channel0 = ButtonLogicState.STATE.OFF
+	elif Channelid == 1:
+		ButtonLogicState.Channel1 = ButtonLogicState.STATE.OFF
+	elif Channelid == 2:
+		ButtonLogicState.Channel2 = ButtonLogicState.STATE.OFF
+	elif Channelid == 3:
+		ButtonLogicState.Channel3 = ButtonLogicState.STATE.OFF
+	elif Channelid == 4:
+		ButtonLogicState.Channel4 = ButtonLogicState.STATE.OFF
+	elif Channelid == 5:
+		ButtonLogicState.Channel5 = ButtonLogicState.STATE.OFF
+	elif Channelid == 6:
+		ButtonLogicState.Channel6 = ButtonLogicState.STATE.OFF
+	elif Channelid == 7:
+		ButtonLogicState.Channel7 = ButtonLogicState.STATE.OFF
+	elif Channelid == 8:
+		ButtonLogicState.Channel8 = ButtonLogicState.STATE.OFF
+	elif Channelid == 9:
+		ButtonLogicState.Channel9 = ButtonLogicState.STATE.OFF
