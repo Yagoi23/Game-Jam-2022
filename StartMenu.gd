@@ -15,6 +15,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func _on_StartGame_pressed():
+	get_tree().change_scene("TestLevel1.tscn")
 
-func _on_TextureButton_button_down():
-	get_tree().change_scene("TestScene.tscn")
+
+
+func _on_Quit_pressed():
+	get_tree().quit()
