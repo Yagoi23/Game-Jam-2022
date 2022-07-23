@@ -23,7 +23,7 @@ var move_dir
 
 signal statechanged
 
-onready var sprite = $ColorRect
+onready var sprite = $Sprite
 
 var right_key
 var left_key
@@ -39,7 +39,7 @@ func _ready():
 	connect("statechanged",$AnimationPlayer,"on_state_changed")
 	player_state = state.IDLE
 	if player_num == 1:
-		sprite.color = Color(255,255,255)
+		sprite.modulate = Color(255,255,255)
 		right_key = "p2_right"
 		left_key = "p2_left"
 		up_key = "p2_up"
