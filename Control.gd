@@ -8,5 +8,5 @@ func _process(delta):
 	if Deaths == 69 and nomorerickroll == false:
 		OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 		nomorerickroll = true
-	if Input.is_action_pressed("restart"):
-		pass
+	if Input.is_action_just_pressed("restart"):
+		Deaths += 1

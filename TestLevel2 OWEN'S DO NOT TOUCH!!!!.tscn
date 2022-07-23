@@ -32,10 +32,10 @@ position = Vector2( -332, -106 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource( 3 )]
+[node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -407, -138 )
 
-[node name="Player2" parent="." groups=["player"] instance=ExtResource( 3 )]
+[node name="Player2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 413, -162 )
 player_num = 1
 
