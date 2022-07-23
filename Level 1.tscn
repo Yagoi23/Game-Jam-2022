@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://nextlevel(bothplayers).tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -53,3 +54,7 @@ position = Vector2( -115, -184 )
 [node name="Player2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 157, -192 )
 player_num = 1
+
+[node name="Node2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 320, 144 )
+scale = Vector2( 10, 7 )
