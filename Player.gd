@@ -56,6 +56,10 @@ func _physics_process(delta):
 	print(current_state)
 	move_dir = Input.get_action_strength(right_key) - Input.get_action_strength(left_key)
 	#print(move_dir)
+	if Input.is_action_pressed(right_key):
+		sprite.flip_h = true
+	elif Input.is_action_just_pressed(left_key):
+		sprite.flip_h = false
 	if move_dir != 0:
 		velocity.x = move_dir*speed
 		#if move_dir == 1:
@@ -102,9 +106,16 @@ func animation():
 	
 
 func JUMP():
+	if velocity.y <= -300:
+		velocity.y = -300
 	velocity.y += weight * gravity
+	if is_on_ceiling():
+		velocity.y = 0
 
 func FALL():
+	if velocity.y >= 300:
+		velocity.y = 300
+
 	velocity.y += weight * gravity
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -5,7 +5,7 @@ onready var raycast = $KinematicBody2D/RayCast2D
 onready var raycast2 = $KinematicBody2D/RayCast2D2
 onready var raycast3 = $KinematicBody2D/RayCast2D3
 onready var kinematicbody = $KinematicBody2D
-onready var sound = $AudioStreamPlayer2D
+#onready var sound = $AudioStreamPlayer2D
 
 export (int) var Channelid = 0
 #var Channel = "Channel" + str(Channelid)

@@ -10,3 +10,8 @@ func _process(delta):
 		nomorerickroll = true
 	if Input.is_action_just_pressed("restart"):
 		Deaths += 1
+		get_tree().reload_current_scene()
+
+func ded():
+	Deaths +=1
+	get_tree().reload_current_scene()
