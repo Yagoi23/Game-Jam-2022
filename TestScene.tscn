@@ -1,16 +1,11 @@
-
-[gd_scene load_steps=6 format=2]
-[gd_scene load_steps=8 format=2]
-
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Button.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/sound/Sneaky-Snitch_backgound_music.mp3" type="AudioStream" id=5]
-[ext_resource path="res://AutoPlatform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://AutoPlatformVertical.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Door.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,14 +13,13 @@
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -524305, 19, 0, -524304, 19, 0, -524303, 19, 0, -524302, 19, 0, -524301, 19, 0, -524300, 19, 0, -524299, 0, 0, -524298, 0, 0, -524297, 0, 0, -524296, 0, 0, -524295, 0, 0, -524294, 0, 0, -524293, 0, 0, -524292, 0, 0, -524291, 0, 0, -458769, 23, 0, -458755, 0, 0, -393233, 23, 0, -393219, 0, 0, -327697, 23, 0, -262161, 23, 0, -196625, 23, 0, -196621, 0, 0, -196620, 0, 0, -196619, 0, 0, -196618, 0, 0, -196617, 0, 0, -196616, 0, 0, -196615, 0, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -262134, 0, 0, -262133, 0, 0, -262132, 0, 0, -262121, 23, 0, -262120, 23, 0, -262119, 23, 0, -131089, 23, 0, -196583, 23, 0, -65553, 23, 0, -131047, 23, 0, -17, 23, 0, -65511, 23, 0, 65519, 23, 0, 25, 23, 0, 131055, 23, 0, 65561, 23, 0, 196591, 23, 0, 131097, 23, 0, 262127, 23, 0, 196633, 23, 0, 327663, 23, 0, 262169, 23, 0, 393199, 23, 0, 327705, 23, 0, 458735, 23, 0, 393241, 23, 0, 524271, 23, 0, 524272, 23, 0, 524273, 23, 0, 524274, 23, 0, 524275, 23, 0, 524276, 23, 0, 524277, 23, 0, 524278, 23, 0, 524279, 23, 0, 524280, 23, 0, 524281, 23, 0, 524282, 23, 0, 524283, 23, 0, 524284, 23, 0, 524285, 23, 0, 524286, 23, 0, 524287, 23, 0, 458752, 23, 0, 458753, 23, 0, 458754, 23, 0, 458755, 23, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 23, 0, 458767, 23, 0, 458768, 23, 0, 458769, 23, 0, 458770, 23, 0, 458771, 23, 0, 458772, 23, 0, 458773, 23, 0, 458774, 23, 0, 458775, 23, 0, 458776, 23, 0, 458777, 23, 0 )
+tile_data = PoolIntArray( -196621, 0, 0, -196620, 0, 0, -196619, 0, 0, -196618, 0, 0, -196617, 0, 0, -196616, 0, 0, -196615, 0, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -262134, 0, 0, -262133, 0, 0, -262132, 0, 0 )
 
 [node name="Box" parent="." instance=ExtResource( 2 )]
 position = Vector2( 196, -217 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 2, 2 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 68, -192 )
@@ -33,26 +27,8 @@ position = Vector2( 68, -192 )
 [node name="Button" parent="." instance=ExtResource( 4 )]
 position = Vector2( 320, -138 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, -168 )
 
-Channelid = 9
-
-[node name="Platform" parent="." instance=ExtResource( 5 )]
-position = Vector2( 464, -120 )
-speed = 20
-
-[node name="Platform2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -472, -200 )
-speed = 100
-max_y = 200
-
-[node name="Door" parent="." instance=ExtResource( 7 )]
-position = Vector2( -80, -160 )
-scale = Vector2( 1, 2 )
-Channelid = 9
-
-[node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 312, -224 )
-player_num = 1
-
+[node name="Platform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 475, -130 )

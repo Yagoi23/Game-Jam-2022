@@ -16,7 +16,6 @@ config/icon="res://assets/sound/icon.png"
 [autoload]
 
 ButtonLogicState="*res://ButtonLogicState.gd"
-BackgourndSound="*res://backgournd sound.tscn"
 
 [input]
 
