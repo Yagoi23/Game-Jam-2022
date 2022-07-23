@@ -13,9 +13,11 @@ export (float) var weight = 1
 #export (float,0,1,0) var acceleration = 1
 #export (int) var friction = 0
 
-var velocity = Vector2.ZERO
-
 enum state {RUNNING, JUMP, IDLE, FALL}
+
+onready var sound = $AudioStreamPlayer2D
+
+var velocity = Vector2.ZERO
 
 var player_state
 
@@ -63,6 +65,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			velocity.y = 0
 			player_state = state.RUNNING
+			sound.play()
 			
 	else:
 		velocity.x = 0
