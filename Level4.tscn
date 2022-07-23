@@ -50,21 +50,51 @@ position = Vector2( -48, 16 )
 scale = Vector2( 3, 3 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
-position = Vector2( -16, 144 )
-scale = Vector2( 1, 3 )
+position = Vector2( -16, 145 )
+
+[node name="Door7" parent="." instance=ExtResource( 5 )]
+position = Vector2( -16, 177 )
+
+[node name="Door8" parent="." instance=ExtResource( 5 )]
+position = Vector2( -16, 113 )
 
 [node name="Door2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -176, 240 )
-scale = Vector2( 1.2, 3 )
+position = Vector2( -176, 241 )
+scale = Vector2( 1.2, 1 )
+
+[node name="Door5" parent="." instance=ExtResource( 5 )]
+position = Vector2( -176, 273 )
+scale = Vector2( 1.2, 1 )
+
+[node name="Door6" parent="." instance=ExtResource( 5 )]
+position = Vector2( -176, 209 )
+scale = Vector2( 1.2, 1 )
 
 [node name="Door3" parent="." instance=ExtResource( 5 )]
-position = Vector2( -16, -209 )
-scale = Vector2( 1, 3 )
+position = Vector2( -16, -207 )
+Channelid = 1
+
+[node name="Door11" parent="." instance=ExtResource( 5 )]
+position = Vector2( -16, -175 )
+Channelid = 1
+
+[node name="Door12" parent="." instance=ExtResource( 5 )]
+position = Vector2( -16, -239 )
 Channelid = 1
 
 [node name="Door4" parent="." instance=ExtResource( 5 )]
-position = Vector2( -176, -113 )
-scale = Vector2( 1.2, 3 )
+position = Vector2( -176, -112 )
+scale = Vector2( 1.2, 1 )
+Channelid = 1
+
+[node name="Door9" parent="." instance=ExtResource( 5 )]
+position = Vector2( -176, -80 )
+scale = Vector2( 1.2, 1 )
+Channelid = 1
+
+[node name="Door10" parent="." instance=ExtResource( 5 )]
+position = Vector2( -176, -144 )
+scale = Vector2( 1.2, 1 )
 Channelid = 1
 
 [node name="Button" parent="." instance=ExtResource( 4 )]

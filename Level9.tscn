@@ -75,5 +75,12 @@ Channelid = 1
 
 [node name="Door3" parent="." instance=ExtResource( 7 )]
 position = Vector2( -176, 16 )
-scale = Vector2( 1, 3 )
+Channelid = 1
+
+[node name="Door4" parent="." instance=ExtResource( 7 )]
+position = Vector2( -176, -15 )
+Channelid = 1
+
+[node name="Door5" parent="." instance=ExtResource( 7 )]
+position = Vector2( -176, 47 )
 Channelid = 1
