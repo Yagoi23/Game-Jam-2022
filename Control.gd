@@ -1,6 +1,6 @@
 extends Node
 
-var Current_Level = 0
+var Current_Level = 1
 var Deaths = 0
 var nomorerickroll = false
 func _process(delta):
