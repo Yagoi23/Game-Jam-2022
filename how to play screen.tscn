@@ -16,14 +16,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -340.0
-margin_top = -122.0
-margin_right = -3.0
-margin_bottom = -20.0
+margin_left = -377.0
+margin_top = -131.0
+margin_right = 19.0
+margin_bottom = 19.0
 rect_scale = Vector2( 2, 2 )
-text = "                  W,A,S,D to move with player 1
+text = "             W to jump,A,S,D to move with player red
 
-                   Arrows to move wtih player 2 
+UP Arrow to jump the rest of arrows to move wtih player blue 
 
                Get to the green boxs to progress
 
