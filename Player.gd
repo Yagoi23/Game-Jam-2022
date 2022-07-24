@@ -55,7 +55,7 @@ func _ready():
 	
 func _physics_process(delta):
 	var current_state = player_state
-	print(current_state)
+	#print(current_state)
 	move_dir = Input.get_action_strength(right_key) - Input.get_action_strength(left_key)
 	#print(move_dir)
 	if Input.is_action_pressed(right_key):
