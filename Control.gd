@@ -13,6 +13,7 @@ func _process(delta):
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("exit"):
 		get_tree().change_scene("res://StartMenu.tscn")
+		Current_Level = 1
 
 func ded():
 	Deaths +=1
