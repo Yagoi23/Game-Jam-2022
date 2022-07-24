@@ -66,13 +66,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -436.0
+margin_left = -449.0
 margin_top = -119.0
+margin_right = 3.0
 margin_bottom = -71.0
 rect_scale = Vector2( 2, 2 )
-text = "                   The both of you wake up in a dark place
-      unsure on what is happing or where you are or what you are
- But you are trap together knowing not why but you need to get out"
+text = "                        The both of you wake up in a dark place
+       unsure on what is happening or where you are or what you are
+ But you are trapped together not knowing why but you need to get out"
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -88,6 +89,7 @@ text = "Narrative"
 position = Vector2( -1446, 2149 )
 scale = Vector2( 7.07129, 7.07129 )
 frames = SubResource( 5 )
+frame = 3
 playing = true
 offset = Vector2( 327, -242 )
 
@@ -95,7 +97,7 @@ offset = Vector2( 327, -242 )
 position = Vector2( 180, 439 )
 scale = Vector2( 6.59375, 7.21191 )
 frames = SubResource( 10 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="Button" type="Button" parent="."]

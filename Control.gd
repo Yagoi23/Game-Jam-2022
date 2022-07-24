@@ -11,6 +11,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("restart"):
 		Deaths += 1
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("exit"):
+		get_tree().change_scene("res://StartMenu.tscn")
 
 func ded():
 	Deaths +=1
