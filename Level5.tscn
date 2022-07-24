@@ -183,6 +183,12 @@ position = Vector2( 176, 304 )
 [node name="Node2D51" parent="Lava" instance=ExtResource( 6 )]
 position = Vector2( 144, 304 )
 
+[node name="Node2D58" parent="Lava" instance=ExtResource( 6 )]
+position = Vector2( 112, 304 )
+
+[node name="Node2D59" parent="Lava" instance=ExtResource( 6 )]
+position = Vector2( 80, 304 )
+
 [node name="Node2D52" parent="Lava" instance=ExtResource( 6 )]
 position = Vector2( 368, 304 )
 

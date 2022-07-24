@@ -12,8 +12,6 @@ func _ready():
 
 func _process(delta):
 	if ButtonLogicState.Channel0 == ButtonLogicState.STATE.ON:
-		print("yes")
 		rotation_degrees += 0.5
 	if ButtonLogicState.Channel1 == ButtonLogicState.STATE.ON:
-		print("also yes")
 		rotation_degrees += -0.5
