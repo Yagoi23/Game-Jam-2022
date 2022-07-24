@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/ABlock.png" type="Texture" id=1]
+[ext_resource path="res://Box.gd" type="Script" id=2]
+[ext_resource path="res://assets/GBlock.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -8,6 +10,10 @@ extents = Vector2( 16, 16 )
 [node name="Box" type="RigidBody2D" groups=["box", "entity"]]
 gravity_scale = 9.8
 can_sleep = false
+script = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
