@@ -12,3 +12,4 @@ func _ready():
 		sprite.visible = false
 	else:
 		sprite.visible = true
+
