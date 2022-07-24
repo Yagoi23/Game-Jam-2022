@@ -4,6 +4,8 @@ extends Node2D
 onready var raycast = $KinematicBody2D/RayCast2D
 onready var raycast2 = $KinematicBody2D/RayCast2D2
 onready var raycast3 = $KinematicBody2D/RayCast2D3
+onready var raycast4 = $KinematicBody2D/RayCast2D4
+onready var raycast5 = $KinematicBody2D/RayCast2D5
 onready var kinematicbody = $KinematicBody2D
 onready var sound = $AudioStreamPlayer2D
 
@@ -24,10 +26,10 @@ func _physics_process(delta):
 		
 		Global_Activate()
 func is_raycast_colliding():
-	if raycast.is_colliding() or raycast2.is_colliding() or raycast3.is_colliding():
+	if raycast.is_colliding() or raycast2.is_colliding() or raycast3.is_colliding() or raycast4.is_colliding() or raycast5.is_colliding():
 		if kinematicbody.position.y <= 2:
 			kinematicbody.position.y += 1
-	elif !raycast.is_colliding() or !raycast2.is_colliding() or !raycast3.is_colliding():
+	elif !raycast.is_colliding() or !raycast2.is_colliding() or !raycast3.is_colliding() or !raycast4.is_colliding() or !raycast5.is_colliding():
 		if kinematicbody.position.y >= 0:
 			kinematicbody.position.y -= 1
 
